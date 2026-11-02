@@ -159,7 +159,7 @@ h2 { font-weight: 500; letter-spacing: -1.2px; font-size: 34px; line-height: 1.2
 /* Local redesign preview. All assets remain self-contained. */
 .site-header { background: #fff; }
 .hero { position: relative; padding-block: 86px 76px; }
-.hero::before { content: ''; position: absolute; inset: 0 calc((1160px - 100vw)/2) 0; z-index: -1; background: radial-gradient(ellipse at 78% 18%,#e8f1ff 0,transparent 55%); pointer-events: none; }
+.hero::before { content: ''; position: absolute; inset: 0 -40px; z-index: -1; background: radial-gradient(ellipse at 78% 18%,#e8f1ff 0,transparent 55%); pointer-events: none; }
 h1 { font-size: clamp(54px,5.4vw,76px); letter-spacing:-3.7px; }
 .hero-intro { max-width: 425px; }
 .hero-topics { display:flex; flex-wrap:wrap; gap:8px; margin-top:27px; }
