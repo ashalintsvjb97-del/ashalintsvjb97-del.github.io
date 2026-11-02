@@ -155,3 +155,43 @@ h2 { font-weight: 500; letter-spacing: -1.2px; font-size: 34px; line-height: 1.2
   html { scroll-behavior: auto; }
   .button { transition: none; }
 }
+
+/* Local redesign preview. All assets remain self-contained. */
+.site-header { background: #fff; }
+.hero { position: relative; padding-block: 86px 76px; }
+.hero::before { content: ''; position: absolute; inset: 0 calc((1160px - 100vw)/2) 0; z-index: -1; background: radial-gradient(ellipse at 78% 18%,#e8f1ff 0,transparent 55%); pointer-events: none; }
+h1 { font-size: clamp(54px,5.4vw,76px); letter-spacing:-3.7px; }
+.hero-intro { max-width: 425px; }
+.hero-topics { display:flex; flex-wrap:wrap; gap:8px; margin-top:27px; }
+.hero-topics span { font-size:10px; padding:5px 10px; border:1px solid #cbd9eb; border-radius:30px; background:#fff; color:#345575; }
+.hero-signature { margin-top:19px; }
+.connection-figure { box-shadow:0 20px 65px #17335b10; border-radius:20px; background:linear-gradient(145deg,#fff,#e8f0fc); transform:rotate(1deg); }
+.about-section { padding-block:40px 64px; }
+.about-content { gap:80px; }
+.interests-section { background:#f3f6fb; padding-block:64px 72px; }
+.course-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:20px; }
+.course-card { background:white; border:1px solid #d5e0ed; border-radius:16px; padding:26px; display:flex; flex-direction:column; min-width:0; transition:transform .2s ease,box-shadow .2s ease; }
+.course-card:hover { transform:translateY(-5px); box-shadow:0 16px 38px #172e5010; }
+.card-top { display:flex; justify-content:space-between; align-items:center; }
+.course-code { font-size:11px; padding:0; }
+.card-number { font-size:11px; color:#657b96; }
+.course-art { height:150px; margin:24px 0; display:flex; align-items:center; justify-content:center; gap:18px; background:radial-gradient(circle at 30% 40%,#dceaff,transparent 70%),#f4f7fc; border-radius:10px; color:#315fae; }
+.course-art svg { width:90px; height:90px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+.course-art span { writing-mode:vertical-rl; font-size:9px; letter-spacing:3px; }
+.course-card h3 { font-size:21px; font-weight:600; line-height:1.35; letter-spacing:-.5px; min-height:57px; margin-bottom:17px; }
+.course-question { font-family:Georgia,serif; font-size:18px; line-height:1.5; color:#294f83; margin-bottom:13px; }
+.course-description { color:var(--text); font-size:13px; line-height:1.85; margin-bottom:22px; }
+.topic-tags { display:flex; flex-wrap:wrap; gap:7px; list-style:none; padding:0; margin: auto 0 23px; }
+.topic-tags li { font-size:10px; line-height:1.4; color:#465c78; background:#f0f4fa; border-radius:5px; padding:6px 8px; }
+.course-card .course-link { border-top:1px solid var(--border); padding-top:17px; margin:0; font-size:11px; justify-content:space-between; }
+.toolkit-section { padding-block:76px; align-items:center; }
+.toolkit-list > div { padding-block:19px; }
+.toolkit-list dt { display:flex; gap:14px; align-items:center; }
+.tool-icon { display:inline-flex; width:38px; height:38px; border:1px solid #d7e3f2; border-radius:10px; background:#f3f7fd; align-items:center; justify-content:center; font:600 15px Consolas,monospace; color:#315fae; }
+.github-section { border-radius:16px; padding:42px; background:radial-gradient(ellipse at 100% 0,#335e91,transparent 75%),#172e50; }
+@media(min-width:1500px) { .hero { padding-block:100px 90px; } }
+@media(max-width:1239px) { .hero::before { inset:0 -28px; } }
+@media(max-width:1000px) { .course-grid { gap:14px; } .course-card { padding:20px; } .course-card h3 { font-size:18px; min-height:73px; } .course-art { height:120px; } .course-question { font-size:17px; } }
+@media(max-width:800px) { .course-grid { grid-template-columns:1fr; gap:20px; } .course-card { padding:26px; } .course-card h3 { min-height:0; font-size:23px; } .course-art { height:140px; } .course-description { max-width:550px; } .topic-tags { margin-top:0; } }
+@media(max-width:720px) { .hero { padding-block:42px 46px; } .hero::before { inset:0 -20px; } h1 { font-size:clamp(46px,11.5vw,68px); letter-spacing:-2.8px; } .hero-intro { font-size:14px; } .connection-figure { transform:none; } .hero-topics { margin-top:22px; } .about-content { gap:6px; } .interests-section { padding-block:40px 46px; } .toolkit-section { padding-block:46px; } .github-section { padding:28px 23px; } .toolkit-list > div { gap:8px; } .tool-icon { width:30px; height:30px; flex-shrink:0; } .toolkit-list dt { gap:8px; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important; transition:none!important; } .course-card:hover { transform:none; } }
